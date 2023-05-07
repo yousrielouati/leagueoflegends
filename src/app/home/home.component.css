@@ -1,0 +1,16 @@
+.titles{
+  display: flex;
+    justify-content: center;
+    font-family: Lucida Bright;
+    font-size: 42px;
+    padding-top: 20px;
+    color: #C4A15B;
+}
+.subtitles{
+  display: flex;
+    justify-content: center;
+    font-family: Lucida Bright;
+    font-size: 30px;
+    color: #C4A15B;
+    padding-bottom: 20px;
+}

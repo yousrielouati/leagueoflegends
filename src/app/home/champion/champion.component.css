@@ -1,0 +1,36 @@
+.title {
+  width: 75px;
+  color: rgba(221,221,221,1);
+  font-family: Rubik;
+  font-weight: Bold;
+  font-size: 46px;
+  opacity: 1;
+  text-align: center;
+}
+
+.text {
+  width: 75px;
+  color: rgba(221,221,221,1);
+  font-family: Rubik;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: center;
+}
+
+.mytable {
+  border-collapse: separate;
+  border-spacing: 2px;
+  border: 1px solid #C4A15B;
+
+}
+
+.mytable td {
+  border: 1px solid #C4A15B;
+  padding: 12px;
+}
+.info{
+  display: flex;
+    justify-content: center;
+    text-align: center;
+}

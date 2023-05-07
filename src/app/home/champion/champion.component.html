@@ -1,0 +1,138 @@
+
+
+<div  *ngIf="champion">
+  <div style="position: fixed; top: 10px; right: 10px;">
+    <a routerLink="/home">
+      <i class="fa-solid fa-arrow-left"></i> Back
+    </a>
+  </div>
+  <div class="px-4 py-4 ">
+    <div class="d-flex">
+      <img  src="{{imagesUrl}}{{champion.image.full}}" width ="150" height="150" alt="{{champion.name}}">
+       <div class="title px-3"  style="display: inline-flex;">
+        {{champion.name}}
+        <div  style="display: inline-flex;" class="pt-3">
+          <p class="text" *ngFor="let tag of champion.tags">#{{tag}}</p>
+        </div>
+       </div>
+       <div class="px-4" style="margin-top: 70px;color: white;">
+        {{champion.blurb}}
+       </div>
+    </div>
+
+    <div class="info">
+      <table  class=" mytable" cellspacing="10" style="color: white;">
+        <tr>
+          <td>Attack</td>
+          <td>Defense</td>
+          <td>Magic</td>
+          <td>Difficulty</td>
+        </tr>
+        <tr>
+          <td>{{champion.info.attack}}</td>
+          <td>{{champion.info.defense}}</td>
+          <td>{{champion.info.magic}}</td>
+          <td>{{champion.info.difficulty}}</td>
+        </tr>
+
+      </table>
+    </div>
+
+    <div style="text-align: center;display: flex; padding: 20px; margin-top: 30px; margin-bottom:24px;   justify-content: center;">
+      <table style="width: 40%;color: white; margin-right: 10%;">
+        <tr>
+          <td>HP</td>
+          <td>{{ champion.stats.hp }}</td>
+        </tr>
+        <tr>
+          <td>Hpper Level</td>
+          <td>{{ champion.stats.hpperlevel }}</td>
+        </tr>
+        <tr>
+          <td>MP</td>
+          <td>{{ champion.stats.mp }}</td>
+        </tr>
+        <tr>
+          <td>Mpper Level</td>
+          <td>{{ champion.stats.mpperlevel }}</td>
+        </tr>
+        <tr>
+          <td>Move Speed</td>
+          <td>{{ champion.stats.movespeed }}</td>
+        </tr>
+        <tr>
+          <td>Armor</td>
+          <td>{{ champion.stats.armor }}</td>
+        </tr>
+
+        <tr>
+          <td>Armor / Level</td>
+          <td>{{ champion.stats.armorperlevel }}</td>
+        </tr>
+        <tr>
+          <td>Spell Block</td>
+          <td>{{ champion.stats.spellblock }}</td>
+        </tr>
+        <tr>
+          <td>Spell Block / Level</td>
+          <td>{{ champion.stats.spellblockperlevel }}</td>
+        </tr>
+        <tr>
+          <td>Attack Range</td>
+          <td>{{ champion.stats.attackrange }}</td>
+        </tr>
+      </table>
+
+
+      <table style="width: 40%;color: white;">
+
+        <tr>
+          <td>HG Regen</td>
+          <td>{{ champion.stats.hpregen }}</td>
+        </tr>
+        <tr>
+          <td>HP Regen / level</td>
+          <td>{{ champion.stats.hpregenperlevel }}</td>
+        </tr>
+        <tr>
+          <td>MP Regen</td>
+          <td>{{ champion.stats.mpregen }}</td>
+        </tr>
+        <tr>
+          <td>MP Regen Per Level</td>
+          <td>{{ champion.stats.mpregenperlevel }}</td>
+        </tr>
+        <tr>
+          <td>Crit</td>
+          <td>{{ champion.stats.crit }}</td>
+        </tr>
+        <tr>
+          <td>Crit / Level</td>
+          <td>{{ champion.stats.critperlevel }}</td>
+        </tr>
+        <tr>
+          <td>Attack Damage</td>
+          <td>{{ champion.stats.attackdamage }}</td>
+        </tr>
+        <tr>
+          <td>Attack Damage / Level</td>
+          <td>{{ champion.stats.attackdamageperlevel }}</td>
+        </tr>
+        <tr>
+          <td>Attack Speed / Level</td>
+          <td>{{ champion.stats.attackspeedperlevel }}</td>
+        </tr>
+        <tr>
+          <td>Attack Speed</td>
+          <td>{{ champion.stats.attackspeed }}</td>
+        </tr>
+      </table>
+    </div>
+S
+
+
+  </div>
+
+
+
+</div>

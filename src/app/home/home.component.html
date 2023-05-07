@@ -1,0 +1,48 @@
+
+<div  *ngIf="freeChampions.length==0">
+  <div class="container" >
+    <div class="titles">LOADING ...</div>
+  </div>
+</div>
+<div style="background-color: #00202D;" *ngIf="freeChampions.length>0">
+  <div class="container" >
+    <div class="titles pb-4" >Free Champions For All Players</div>
+    <div class="row">
+      <div class=" col-sm-6 col-md-4 col-lg-3 mb-3" *ngFor="let champion of freeChampions">
+        <mat-card style="background-color: #EDDC91;border-radius: 10px;">
+          <img mat-card-image src="{{imagesUrl}}{{champion.image.full}}"  alt="{{champion.name}}">
+          <mat-card-content style="    height: 110px;">
+            <h3 mat-card-title>{{champion.name}}</h3>
+            <p mat-card-subtitle>{{champion.title}}</p>
+            <div class="d-inline-flex">
+              <p *ngFor="let tag of champion.tags">#{{tag}}</p>
+            </div>
+          </mat-card-content>
+          <mat-card-actions style="display: flex;justify-content: center;">
+            <button mat-button class="btn  btn-lg"   style=" background-color: #C4A15B; color: white;" [routerLink]="['/home/champion',champion.key]">Details</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="titles">Free Champions For New Players</div>
+    <div class="subtitles">Under Level {{freeChampionsIds.maxNewPlayerLevel}}</div>
+    <div class="row">
+      <div class=" col-sm-6 col-md-4 col-lg-3 mb-3" *ngFor="let champion of freeChampionsNewPlayers">
+        <mat-card style="background-color: #EDDC91;border-radius: 10px;">
+          <img mat-card-image src="{{imagesUrl}}{{champion.image.full}}"  alt="{{champion.name}}">
+          <mat-card-content style="    height: 110px;">
+            <h3 mat-card-title>{{champion.name}}</h3>
+            <p mat-card-subtitle>{{champion.title}}</p>
+            <div class="d-inline-flex">
+              <p *ngFor="let tag of champion.tags">#{{tag}}</p>
+            </div>
+          </mat-card-content>
+          <mat-card-actions style="display: flex;justify-content: center;">
+            <button mat-button class="btn  btn-lg"   style=" background-color: #C4A15B; color: white;" [routerLink]="['/home/champion',champion.key]">Details</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+  </div>
+
+</div>
